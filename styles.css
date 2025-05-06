@@ -56,28 +56,42 @@ main h2 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-.grid-item, .promo-box {
+.grid-item {
   background: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  position: relative;
 }
 
-.grid-item:hover, .promo-box:hover {
+.grid-item:hover {
   transform: scale(1.03);
 }
 
 .grid-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 180px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.offer-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #e63946;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 .promo-box {
@@ -91,7 +105,13 @@ main h2 {
   font-size: 16px;
   cursor: pointer;
   text-align: center;
-  min-height: 100px;
+  min-height: 120px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.promo-box:hover {
+  transform: scale(1.03);
 }
 
 footer {
