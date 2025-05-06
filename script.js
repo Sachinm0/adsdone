@@ -1,24 +1,24 @@
 // Real or demo affiliate products
 const products = [
   {
-    link: "https://amzn.to/3V5KXgG",
-    image: "https://m.media-amazon.com/images/I/71dNGEQb9wL._AC_UL320_.jpg"
+    link: "https://amzn.to/4jHP6eQ",
+    image: "https://m.media-amazon.com/images/I/713gRUj4l7L._SL1500_.jpg"
   },
   {
-    link: "https://amzn.to/4aPNE3u",
-    image: "https://m.media-amazon.com/images/I/71K7QchMezL._AC_UL320_.jpg"
+    link: "https://amzn.to/3GCqTIx",
+    image: "https://m.media-amazon.com/images/I/71nOmAy-OlL._SL1500_.jpg"
   },
   {
-    link: "https://amzn.to/3V7W9Pu",
-    image: "https://m.media-amazon.com/images/I/6113L1UOCJL._AC_UL320_.jpg"
+    link: "https://amzn.to/3St5SlT",
+    image: "https://m.media-amazon.com/images/I/71grcs4BY-L._SY741_.jpg"
   },
   {
-    link: "https://amzn.to/3Wv8Tm2",
-    image: "https://m.media-amazon.com/images/I/81p4D2QKQZL._AC_UL320_.jpg"
+    link: "https://amzn.to/42O8G3m",
+    image: "https://m.media-amazon.com/images/I/51vSSbNMkfL._SX679_.jpg"
   },
   {
-    link: "https://amzn.to/3xE5lV1",
-    image: "https://m.media-amazon.com/images/I/710Rj1y0DBL._AC_UL320_.jpg"
+    link: "https://amzn.to/4k4Wn8k",
+    image: "https://m.media-amazon.com/images/I/51z9ig1sQrL._SY625_.jpg"
   }
 ];
 
