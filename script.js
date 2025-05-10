@@ -1,56 +1,58 @@
-// Products with offer % added
+const sizes = [
+  { w: 120, h: 120 },
+  { w: 120, h: 150 },
+  { w: 180, h: 180 },
+  { w: 200, h: 200 },
+  { w: 200, h: 240 },
+];
+
 const products = [
   {
-    link: "https://amzn.to/44puEux",
-    image: "https://m.media-amazon.com/images/I/6186Xb7H1TL._SL1200_.jpg",
-    offer: "80% OFF"
+    link: "https://amzn.to/42SE2FZ",
+    image: "https://m.media-amazon.com/images/I/71AXSIdO4oL._SL1500_.jpg",
+    offer: "7% OFF"
   },
   {
-    link: "https://amzn.to/3RPU4Ks",
-    image: "https://m.media-amazon.com/images/I/51C14VcBgyL._SL1500_.jpg",
-    offer: "46% OFF"
+    link: "https://amzn.to/3Zev4Ar",
+    image: "https://m.media-amazon.com/images/I/71g4CMwdYyL._SL1500_.jpg",
+    offer: "63% OFF"
   },
   {
-    link: "https://amzn.to/4d7ILqL",
-    image: "https://m.media-amazon.com/images/I/61z8wnO6gSL._SX679_.jpg",
-    offer: "78% OFF"
+    link: "https://amzn.to/4maieNu",
+    image: "https://m.media-amazon.com/images/I/51o3dOFhfsL._SL1000_.jpg",
+    offer: "25% OFF"
   },
   {
-    link: "https://amzn.to/43h7EwI",
-    image: "https://m.media-amazon.com/images/I/81Y+gtQJ1pL._SY679_.jpg",
-    offer: "79% OFF"
+    link: "https://amzn.to/3GPH1Gw",
+    image: "https://m.media-amazon.com/images/I/71zdJZU7w0L._SL1500_.jpg",
+    offer: "22% OFF"
   },
   {
-    link: "https://amzn.to/42LmvPZ",
-    image: "https://m.media-amazon.com/images/I/810LeYsd6pL._SX679_.jpg",
-    offer: "50% OFF"
+    link: "https://amzn.to/4jZEBne",
+    image: "https://m.media-amazon.com/images/I/51QCRhUJ1IL.jpg",
+    offer: "11% OFF"
   }
 ];
 
-// Shuffle products
+// Shuffle array
 const shuffled = products
-  .map(value => ({ value, sort: Math.random() }))
-  .sort((a, b) => a.sort - b.sort)
-  .map(({ value }) => value);
+  .map(p => ({...p, size: sizes[Math.floor(Math.random() * sizes.length)]}))
+  .sort(() => Math.random() - 0.5);
 
 const grid = document.getElementById("productGrid");
 
-// Insert promo boxes every 3 products
 shuffled.forEach((product, index) => {
-  if (index % 3 === 0 && index !== 0) {
-    const promo = document.createElement("div");
-    promo.className = "promo-box";
-    promo.innerText = "🎯 Buy Product Place – Promote Your Link Here!";
-    grid.appendChild(promo);
-  }
-
   const item = document.createElement("div");
-  item.className = "grid-item";
+  item.className = "pixel-item";
+  item.style.width = product.size.w + "px";
+  item.style.height = product.size.h + 30 + "px"; // +30 for offer text
+
   item.innerHTML = `
     <a href="${product.link}" target="_blank" rel="noopener">
-      <span class="offer-badge">${product.offer}</span>
-      <img src="${product.image}" alt="Affiliate Product" />
+      <img src="${product.image}" width="${product.size.w}" height="${product.size.h}" />
     </a>
+    <div class="offer-text">${product.offer}</div>
   `;
+
   grid.appendChild(item);
 });
