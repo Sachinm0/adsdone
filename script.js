@@ -31,6 +31,31 @@ const products = [
     link: "https://amzn.to/4jZEBne",
     image: "https://m.media-amazon.com/images/I/51QCRhUJ1IL.jpg",
     offer: "11% OFF"
+  },
+   {
+    link: "https://amzn.to/44Ci4Z7",
+    image: "https://m.media-amazon.com/images/I/815K+OKxh4L._SL1500_.jpg",
+    offer: "17% OFF"
+  },
+   {
+    link: "https://amzn.to/4knAZeN",
+    image: "https://m.media-amazon.com/images/I/71xI7sOSp3L._SL1500_.jpg",
+    offer: "7% OFF"
+  },
+   {
+    link: "https://amzn.to/43k4qHM",
+    image: "https://m.media-amazon.com/images/I/412CAjfMbvL.jpg",
+    offer: "11% OFF"
+  },
+   {
+    link: "https://amzn.to/4dqLNXo",
+    image: "https://m.media-amazon.com/images/I/71X3qWhB1EL._SL1500_.jpg",
+    offer: "35% OFF"
+  },
+   {
+    link: "https://amzn.to/3F6oxkG",
+    image: "https://m.media-amazon.com/images/I/51ByUwwJw+L._SL1100_.jpg",
+    offer: "10% OFF"
   }
 ];
 
